@@ -13,8 +13,12 @@ class Main {
                 answer.add(b[p2++]);
             }
         }
-        while(p1<n) answer.add(a[p1++]);
-        while(p2<m) answer.add(b[p2++]);
+//        while(p1<n){
+//            answer.add(a[p1++]);
+//        }
+//        while(p2<m){
+//            answer.add(b[p2++]);
+//        }
         return answer;
     }
 
