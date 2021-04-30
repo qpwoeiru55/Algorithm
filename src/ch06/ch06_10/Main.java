@@ -1,3 +1,5 @@
+package ch06.ch06_10;
+
 import java.util.*;
 class Main {
     public int count(int[] arr, int dist){
@@ -36,9 +38,7 @@ class Main {
         int n=kb.nextInt();
         int c=kb.nextInt();
         int[] arr=new int[n];
-        for(int i=0; i<n; i++){
-            arr[i]=kb.nextInt();
-        }
+        for(int i=0; i<n; i++) arr[i]=kb.nextInt();
         System.out.println(T.solution(n, c, arr));
     }
 }
