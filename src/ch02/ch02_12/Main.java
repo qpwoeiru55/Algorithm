@@ -13,7 +13,9 @@ class Main {
                         if(arr[k][s]==i){
                             pi=s;
                         }
-                        if(arr[k][s]==j) pj=s;
+                        if(arr[k][s]==j){
+                            pj=s;
+                        }
                     }
                     if(pi<pj) cnt++;
                 }

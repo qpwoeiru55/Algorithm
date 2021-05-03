@@ -30,7 +30,9 @@ class Main {
             }
             if(tmp!=null){
                 answer++;
-                if(tmp.id==m) return answer;
+                if(tmp.id==m){
+                    return answer;
+                }
             }
         }
         return answer;

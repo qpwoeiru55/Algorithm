@@ -21,7 +21,9 @@ class Main {
         for(int x : Tset){
             //System.out.println(x);
             cnt++;
-            if(cnt==k) return x;
+            if(cnt==k){
+                return x;
+            }
         }
         return answer;
     }
