@@ -11,9 +11,10 @@ public class Main {
         }
     }
 
-    public void solution(int n){
+    public void solution(int n) {
         DFS(n);
     }
+
     public static void main(String[] args){
         Main T = new Main();
         T.solution(3);

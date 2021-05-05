@@ -1,4 +1,4 @@
-package ch07.ch07_07;
+package ch07.ch07_10;
 
 import java.util.*;
 class Node{
@@ -12,16 +12,17 @@ class Node{
 
 public class Main{
     Node root;
-    public void BFS(Node root){
+    public int BFS(Node root){
         Queue<Node> Q=new LinkedList<>();
         Q.offer(root);
         int L=0;
         while(!Q.isEmpty()){
-            int len = Q.size();
-            System.out.print(L+" : ");
+            int len=Q.size();
             for(int i=0; i<len; i++){
-                Node cur = Q.poll();
-                System.out.print(cur.data+" ");
+                Node cur=Q.poll();
+                if(cur.lt==null && cur.rt==null){
+                    return L;
+                }
                 if(cur.lt!=null){
                     Q.offer(cur.lt);
                 }
@@ -30,8 +31,8 @@ public class Main{
                 }
             }
             L++;
-            System.out.println();
         }
+        return 0;
     }
 
     public static void main(String args[]) {
@@ -41,8 +42,6 @@ public class Main{
         tree.root.rt=new Node(3);
         tree.root.lt.lt=new Node(4);
         tree.root.lt.rt=new Node(5);
-        tree.root.rt.lt=new Node(6);
-        tree.root.rt.rt=new Node(7);
-        tree.BFS(tree.root);
+        System.out.println(tree.BFS(tree.root));
     }
-} 
+}
