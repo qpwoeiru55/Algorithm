@@ -5,6 +5,7 @@ class Main {
     int[] dis={1, -1, 5};
     int[] ch;
     Queue<Integer> Q = new LinkedList<>();
+
     public int BFS(int s, int e){
         ch=new int[10001];
         ch[s]=1;

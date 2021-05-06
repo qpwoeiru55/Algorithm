@@ -5,6 +5,7 @@ class Main {
     static int n, m, answer=0;
     static ArrayList<ArrayList<Integer>> graph;
     static int[] ch, dis;
+
     public void BFS(int v){
         ch[v]=1;
         dis[v]=0;
