@@ -24,7 +24,9 @@ public class Main {
     }
 
     public void DFS(int x, int y){
-        if(x==7 && y==7) answer++;
+        if(x==7 && y==7){
+            answer++;
+        }
         else{
             for(int i=0; i<4; i++){
                 int nx=x+dx[i];

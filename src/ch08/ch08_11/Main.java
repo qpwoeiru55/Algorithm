@@ -12,6 +12,7 @@ class Main {
     static int[] dx={-1, 0, 1, 0};
     static int[] dy={0, 1, 0, -1};
     static int[][] board, dis;
+
     public void BFS(int x, int y){
         Queue<Point> Q=new LinkedList<>();
         Q.offer(new Point(x, y));

@@ -42,8 +42,12 @@ class Main {
         for(int i=0; i<n; i++){
             for(int j=0; j<n; j++){
                 int tmp=kb.nextInt();
-                if(tmp==1) hs.add(new Point(i, j));
-                else if(tmp==2) pz.add(new Point(i, j));
+                if(tmp==1){
+                    hs.add(new Point(i, j));
+                }
+                else if(tmp==2){
+                    pz.add(new Point(i, j));
+                }
             }
         }
         len=pz.size();

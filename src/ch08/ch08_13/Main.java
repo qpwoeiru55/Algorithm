@@ -5,6 +5,7 @@ class Main {
     static int answer=0, n;
     static int[] dx={-1, -1, 0, 1, 1, 1, 0, -1};
     static int[] dy={0, 1, 1, 1, 0, -1, -1, -1};
+
     public void DFS(int x, int y, int[][] board){
         for(int i=0; i<8; i++){
             int nx=x+dx[i];

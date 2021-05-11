@@ -14,6 +14,7 @@ class Main {
     static int[][] board, dis;
     static int n, m;
     static Queue<Point> Q=new LinkedList<>();
+
     public void BFS(){
         while(!Q.isEmpty()){
             Point tmp=Q.poll();
@@ -39,7 +40,9 @@ class Main {
         for(int i=0; i<n; i++){
             for(int j=0; j<m; j++){
                 board[i][j]=kb.nextInt();
-                if(board[i][j]==1) Q.offer(new Point(i, j));
+                if(board[i][j]==1){
+                    Q.offer(new Point(i, j));
+                }
             }
         }
         T.BFS();
@@ -47,7 +50,9 @@ class Main {
         int answer=Integer.MIN_VALUE;
         for(int i=0; i<n; i++){
             for(int j=0; j<m; j++){
-                if(board[i][j]==0) flag=false;
+                if(board[i][j]==0){
+                    flag=false;
+                }
             }
         }
         if(flag){
@@ -58,6 +63,8 @@ class Main {
             }
             System.out.println(answer);
         }
-        else System.out.println(-1);
+        else{
+            System.out.println(-1);
+        }
     }
 }
