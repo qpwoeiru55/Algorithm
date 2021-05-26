@@ -3,14 +3,14 @@ package ch08.ch08_02;
 import java.util.*;
 class Main{
     static int answer=Integer.MIN_VALUE, c, n;
+
     public void DFS(int L, int sum, int[] arr){
         if(sum>c){
             return;
         }
         if(L==n){
             answer=Math.max(answer, sum);
-        }
-        else{
+        }else{
             DFS(L+1, sum+arr[L], arr);
             DFS(L+1, sum, arr);
         }

@@ -4,6 +4,7 @@ import java.util.*;
 class Main{
     static int answer=Integer.MIN_VALUE, n, m;
     boolean flag=false;
+
     public void DFS(int L, int sum, int time, int[] ps, int[] pt){
         if(time>m){
             return;
