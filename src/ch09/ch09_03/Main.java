@@ -1,6 +1,7 @@
 package ch09.ch09_03;
 
 import java.util.*;
+
 class Time implements Comparable<Time>{
     public int time;
     public char state;
