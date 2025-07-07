@@ -1,4 +1,4 @@
-package stackQue.day07;
+package StackQue.day07;
 
 import java.util.LinkedList;
 import java.util.Queue;

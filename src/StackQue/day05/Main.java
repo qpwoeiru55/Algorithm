@@ -1,4 +1,4 @@
-package stackQue.day05;
+package StackQue.day05;
 
 import java.util.Scanner;
 import java.util.Stack;
