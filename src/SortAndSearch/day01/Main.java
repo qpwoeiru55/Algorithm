@@ -17,7 +17,7 @@ public class Main {
             for(int x : arr){
                 System.out.print(x + " ");
             }
-            System.out.println("");
+            System.out.println();
         }
         return arr;
     }
