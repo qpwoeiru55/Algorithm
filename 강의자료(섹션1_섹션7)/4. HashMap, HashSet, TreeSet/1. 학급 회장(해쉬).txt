@@ -1,6 +1,6 @@
 import java.util.*;
 class Main {	
-	public char solution(int n, String s){
+	public char solution(int n, ch01_String s){
 		char answer=' ';
 		HashMap<Character, Integer> map=new HashMap<>();
 		for(char x : s.toCharArray()){
@@ -21,11 +21,11 @@ class Main {
 		return answer;
 	}
 
-	public static void main(String[] args){
+	public static void main(ch01_String[] args){
 		Main T = new Main();
 		Scanner kb = new Scanner(System.in);
 		int n=kb.nextInt();
-		String str=kb.next();
+		ch01_String str=kb.next();
 		System.out.println(T.solution(n, str));
 	}
 }

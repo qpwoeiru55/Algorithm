@@ -1,6 +1,6 @@
 import java.util.*;
 class Main {	
-	public int solution(String str){
+	public int solution(ch01_String str){
 		int answer=0;
 		Stack<Integer> stack = new Stack<>();
 		for(char x : str.toCharArray()){
@@ -19,10 +19,10 @@ class Main {
 		answer=stack.get(0);
 		return answer;
 	}
-	public static void main(String[] args){
+	public static void main(ch01_String[] args){
 		Main T = new Main();
 		Scanner kb = new Scanner(System.in);
-		String str=kb.next();
+		ch01_String str=kb.next();
 		System.out.println(T.solution(str));
 	}
 }

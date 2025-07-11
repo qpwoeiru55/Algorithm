@@ -5,7 +5,7 @@ class Main {
 		else if(n==2) return 1;
 		else return DFS(n-2)+DFS(n-1);
 	}
-	public static void main(String[] args){
+	public static void main(ch01_String[] args){
 		Main T = new Main();
 		int n=10;
 		for(int i=1; i<=n; i++) System.out.print(T.DFS(i)+" ");
@@ -24,7 +24,7 @@ class Main {
 		else if(n==2) return fibo[n]=1;
 		else return fibo[n]=DFS(n-2)+DFS(n-1);
 	}
-	public static void main(String[] args){
+	public static void main(ch01_String[] args){
 		Main T = new Main();
 		int n=45;
 		fibo=new int[n+1];

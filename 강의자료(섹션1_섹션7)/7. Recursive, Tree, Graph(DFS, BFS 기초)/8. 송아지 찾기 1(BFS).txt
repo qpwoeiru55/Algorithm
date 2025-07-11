@@ -29,7 +29,7 @@ class Main {
 		return 0;
 	}
 
-	public static void main(String[] args){
+	public static void main(ch01_String[] args){
 		Main T = new Main();
 		Scanner kb = new Scanner(System.in);
 		int s=kb.nextInt();

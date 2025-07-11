@@ -4,7 +4,7 @@ class Main {
 	static int[] ch;
 	public void DFS(int L){
 		if(L==n+1){
-			String tmp="";
+			ch01_String tmp="";
 			for(int i=1; i<=n; i++){
 				if(ch[i]==1) tmp+=(i+" ");
 			}
@@ -18,7 +18,7 @@ class Main {
 		}
 	}
 
-	public static void main(String[] args){
+	public static void main(ch01_String[] args){
 		Main T = new Main();
 		n=3;
 		ch=new int[n+1];

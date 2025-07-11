@@ -11,7 +11,7 @@ class Main {
 	public void solution(int n){
 		DFS(n);
 	}
-	public static void main(String[] args){
+	public static void main(ch01_String[] args){
 		Main T = new Main();
 		T.solution(3);
 		//System.out.println(T.solution(3));

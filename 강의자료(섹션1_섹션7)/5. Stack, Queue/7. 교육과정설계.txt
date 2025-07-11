@@ -1,7 +1,7 @@
 import java.util.*;
 class Main {	
-	public String solution(String need, String plan){
-		String answer="YES";
+	public ch01_String solution(ch01_String need, ch01_String plan){
+		ch01_String answer="YES";
 		Queue<Character> Q=new LinkedList<>();
 		for(char x : need.toCharArray()) Q.offer(x);
 		for(char x : plan.toCharArray()){
@@ -12,11 +12,11 @@ class Main {
 		if(!Q.isEmpty()) return "NO";
 		return answer;
 	}
-	public static void main(String[] args){
+	public static void main(ch01_String[] args){
 		Main T = new Main();
 		Scanner kb = new Scanner(System.in);
-		String a=kb.next();
-		String b=kb.next();
+		ch01_String a=kb.next();
+		ch01_String b=kb.next();
 		System.out.println(T.solution(a, b));
 	}
 }

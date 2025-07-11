@@ -1,6 +1,6 @@
 import java.util.*;
 class Main {	
-	public int[] solution(String s, char t){
+	public int[] solution(ch01_String s, char t){
 		int[] answer=new int[s.length()];
 		int p=1000;
 		for(int i=0; i<s.length(); i++){
@@ -24,10 +24,10 @@ class Main {
 		return answer;
 	}
 
-	public static void main(String[] args){
+	public static void main(ch01_String[] args){
 		Main T = new Main();
 		Scanner kb = new Scanner(System.in);
-		String str=kb.next();
+		ch01_String str=kb.next();
 		char c=kb.next().charAt(0);
 		for(int x : T.solution(str, c)){
 			System.out.print(x+" ");

@@ -1,10 +1,10 @@
 import java.util.*;
 class Main {	
-	public String solution(String str){
-		String answer="";
+	public ch01_String solution(ch01_String str){
+		ch01_String answer="";
 		int m=Integer.MIN_VALUE;
-		String[] s = str.split(" ");
-		for(String x : s){
+		ch01_String[] s = str.split(" ");
+		for(ch01_String x : s){
 			int len=x.length();
 			if(len>m){
 				m=len;
@@ -14,10 +14,10 @@ class Main {
 		return answer;
 	}
 
-	public static void main(String[] args){
+	public static void main(ch01_String[] args){
 		Main T = new Main();
 		Scanner kb = new Scanner(System.in);
-		String str=kb.nextLine();
+		ch01_String str=kb.nextLine();
 		System.out.print(T.solution(str));
 	}
 }
@@ -27,11 +27,11 @@ class Main {
 
 import java.util.*;
 class Main {	
-	public String solution(String str){
-		String answer="";
+	public ch01_String solution(ch01_String str){
+		ch01_String answer="";
 		int m=Integer.MIN_VALUE, pos;
 		while((pos=str.indexOf(' '))!=-1){
-			String tmp=str.substring(0, pos);
+			ch01_String tmp=str.substring(0, pos);
 			int len=tmp.length();
 			if(len>m){
 				m=len;
@@ -43,10 +43,10 @@ class Main {
 		return answer;
 	}
 
-	public static void main(String[] args){
+	public static void main(ch01_String[] args){
 		Main T = new Main();
 		Scanner kb = new Scanner(System.in);
-		String str=kb.nextLine();
+		ch01_String str=kb.nextLine();
 		System.out.print(T.solution(str));
 	}
 }

@@ -20,7 +20,7 @@ public class Main{
 		}
     } 
   
-    public static void main(String args[]) { 
+    public static void main(ch01_String args[]) {
         Main tree=new Main(); 
         tree.root=new Node(1); 
         tree.root.lt=new Node(2); 

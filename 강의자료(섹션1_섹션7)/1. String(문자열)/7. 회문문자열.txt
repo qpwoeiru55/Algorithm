@@ -1,7 +1,7 @@
 import java.util.*;
 class Main {	
-	public String solution(String str){
-		String answer="YES";
+	public ch01_String solution(ch01_String str){
+		ch01_String answer="YES";
 		str=str.toUpperCase();
 		int len=str.length();
 		for(int i=0; i<len/2; i++){
@@ -10,10 +10,10 @@ class Main {
 		return answer;
 	}
 
-	public static void main(String[] args){
+	public static void main(ch01_String[] args){
 		Main T = new Main();
 		Scanner kb = new Scanner(System.in);
-		String str=kb.next();
+		ch01_String str=kb.next();
 		System.out.print(T.solution(str));
 	}
 }
@@ -22,17 +22,17 @@ class Main {
 
 import java.util.*;
 class Main {	
-	public String solution(String str){
-		String answer="NO";
-		String tmp=new StringBuilder(str).reverse().toString();
+	public ch01_String solution(ch01_String str){
+		ch01_String answer="NO";
+		ch01_String tmp=new StringBuilder(str).reverse().toString();
 		if(str.equalsIgnoreCase(tmp)) answer="YES";
 		return answer;
 	}
 
-	public static void main(String[] args){
+	public static void main(ch01_String[] args){
 		Main T = new Main();
 		Scanner kb = new Scanner(System.in);
-		String str=kb.next();
+		ch01_String str=kb.next();
 		System.out.print(T.solution(str));
 	}
 }

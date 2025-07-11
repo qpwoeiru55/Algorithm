@@ -1,7 +1,7 @@
 import java.util.*;
 class Main {	
-	public String solution(String str){
-		String answer;
+	public ch01_String solution(ch01_String str){
+		ch01_String answer;
 		char[] s=str.toCharArray();
 		int lt=0, rt=str.length()-1;
 		while(lt<rt){
@@ -15,14 +15,14 @@ class Main {
 				rt--;
 			}
 		}
-		answer=String.valueOf(s);
+		answer=ch01_String.valueOf(s);
 		return answer;
 	}
 
-	public static void main(String[] args){
+	public static void main(ch01_String[] args){
 		Main T = new Main();
 		Scanner kb = new Scanner(System.in);
-		String str=kb.next();
+		ch01_String str=kb.next();
 		System.out.println(T.solution(str));
 	}
 }

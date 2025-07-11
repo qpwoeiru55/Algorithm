@@ -1,7 +1,7 @@
 import java.util.*;
 class Main {	
-	public String solution(String s1, String s2){
-		String answer="YES";
+	public ch01_String solution(ch01_String s1, ch01_String s2){
+		ch01_String answer="YES";
 		HashMap<Character, Integer> map=new HashMap<>();
 		for(char x : s1.toCharArray()){
 			map.put(x, map.getOrDefault(x, 0)+1);
@@ -13,11 +13,11 @@ class Main {
 		return answer;
 	}
 
-	public static void main(String[] args){
+	public static void main(ch01_String[] args){
 		Main T = new Main();
 		Scanner kb = new Scanner(System.in);
-		String a=kb.next();
-		String b=kb.next();
+		ch01_String a=kb.next();
+		ch01_String b=kb.next();
 		System.out.print(T.solution(a, b));
 	}
 }

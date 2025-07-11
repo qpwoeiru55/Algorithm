@@ -34,7 +34,7 @@ class Main {
 		return answer;
 	}
 
-	public static void main(String[] args) throws IOException{
+	public static void main(ch01_String[] args) throws IOException{
 		Main T = new Main();
 		Scanner kb = new Scanner(System.in);
 		int n=kb.nextInt();

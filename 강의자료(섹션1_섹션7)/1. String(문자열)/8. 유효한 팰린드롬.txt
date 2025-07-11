@@ -1,17 +1,17 @@
 import java.util.*;
 class Main {	
-	public String solution(String s){
-		String answer="NO";
+	public ch01_String solution(ch01_String s){
+		ch01_String answer="NO";
 		s=s.toUpperCase().replaceAll("[^A-Z]", "");
-		String tmp=new StringBuilder(s).reverse().toString();
+		ch01_String tmp=new StringBuilder(s).reverse().toString();
 		if(s.equals(tmp)) answer="YES";
 		return answer;
 	}
 
-	public static void main(String[] args){
+	public static void main(ch01_String[] args){
 		Main T = new Main();
 		Scanner kb = new Scanner(System.in);
-		String str=kb.nextLine();
+		ch01_String str=kb.nextLine();
 		System.out.print(T.solution(str));
 	}
 }
