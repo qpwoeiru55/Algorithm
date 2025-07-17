@@ -1,45 +1,43 @@
 package ch07_DFS_BFS.day12;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    static int n, m, answer;
-    static ArrayList<ArrayList<Integer>> graph;
+    static int[][] arr;
+    static int n;
+    static int m;
+    static int answer = 0;
     static int[] ch;
+
     public static void main(String[] args) {
         Main T = new Main();
         Scanner kb = new Scanner(System.in);
-        n  = kb.nextInt();
+        n = kb.nextInt();
         m = kb.nextInt();
-        graph = new ArrayList<ArrayList<Integer>>();
-        ch = new int[n+1];
-
-        for(int i=0; i<=n; i++){
-            graph.add(new ArrayList<Integer>());
-        }
-
-        for(int i=0; i<m; i++){
+        arr = new int[n + 1][n + 1];
+        ch = new int[n + 1];
+        for (int i = 1; i <= m; i++) {
             int a = kb.nextInt();
             int b = kb.nextInt();
-            graph.get(a).add(b);
+            arr[a][b] = 1;
         }
         ch[1] = 1;
-        DFS(1);
+        T.DSF(1);
         System.out.println(answer);
     }
 
-    private static void DFS(int i) {
-        if(i == n){
+    private void DSF(int v) {
+        if (v == n) {
             answer++;
-        }else{
-            for(Integer x : graph.get(i)){
-                if(ch[x] != 1){
-                    ch[x] = 1;
-                    DFS(x);
-                    ch[x] = 0;
+        } else {
+            for (int i = 1; i <= n; i++) {
+                if (arr[v][i] == 1 && ch[i] != 1) {
+                    ch[i] = 1;
+                    DSF(i);
+                    ch[i] = 0;
                 }
             }
         }
     }
 }
+
