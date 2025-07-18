@@ -32,7 +32,5 @@ public class Main {
             DFS(sum + a[num], num + 1, time + b[num]);
             DFS(sum, num + 1, time);
         }
-
-
     }
 }
