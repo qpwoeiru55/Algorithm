@@ -3,47 +3,62 @@ package ch08_DFS_BFS.day08;
 import java.util.Scanner;
 
 public class Main {
-    static int[] b, p, ch;
-    static int n, f;
+    static int n, m;
+    static int[][] dm;
+    static int[] pm;
+    static int[] ch, ans;
     boolean flag = false;
-    int[][] dy = new int[35][35];
-
-    public int combi(int n, int r) {
-        if (dy[n][r] > 0) return dy[n][r];
-        if (n == r || r == 0) return 1;
-        else return dy[n][r] = combi(n - 1, r - 1) + combi(n - 1, r);
-    }
-
-    public void DFS(int L, int sum) {
-        if (flag) return;
-        if (L == n) {
-            if (sum == f) {
-                for (int x : p) System.out.print(x + " ");
-                flag = true;
-            }
-        } else {
-            for (int i = 1; i <= n; i++) {
-                if (ch[i] == 0) {
-                    ch[i] = 1;
-                    p[L] = i;
-                    DFS(L + 1, sum + (p[L] * b[L]));
-                    ch[i] = 0;
-                }
-            }
-        }
-    }
 
     public static void main(String[] args) {
         Main T = new Main();
         Scanner kb = new Scanner(System.in);
         n = kb.nextInt();
-        f = kb.nextInt();
-        b = new int[n];
-        p = new int[n];
+        m = kb.nextInt();
+        dm = new int[35][35];
+        pm = new int[n];
+
         ch = new int[n + 1];
+        ans = new int[n];
         for (int i = 0; i < n; i++) {
-            b[i] = T.combi(n - 1, i);
+            pm[i] = combi(n - 1, i);
         }
         T.DFS(0, 0);
+
     }
+
+    private void DFS(int l, int sum) {
+        if (flag) {
+            return;
+        }
+        if (l == n) {
+            if (sum == m) {
+                for (int x : ans) {
+                    System.out.print(x + " ");
+                }
+                flag = true;
+            }
+        } else {
+            for (int i = 0; i < n; i++) {
+                if (ch[i + 1] == 0) {
+                    ch[i + 1] = 1;
+                    ans[l] = i+1;
+                    DFS(l + 1, sum + pm[l] * ans[l]);
+                    ch[i + 1] = 0;
+                }
+            }
+        }
+    }
+
+    private static int combi(int n, int r) {
+        if (dm[n][r] > 0) {
+            return dm[n][r];
+        }
+        if (n == r || r == 0) {
+            return 1;
+        } else {
+            return dm[n][r] = combi(n - 1, r) + combi(n - 1, r - 1);
+        }
+    }
+
+
 }
