@@ -20,8 +20,8 @@ public class Main {
         Main T = new Main();
         Scanner kb = new Scanner(System.in);
 
-        n = kb.nextInt(); // ✔️ 필수 입력
-        m = kb.nextInt(); // ✔️ 필수 입력
+        n = kb.nextInt();
+        m = kb.nextInt();
 
         h = new ArrayList<>();
         p = new ArrayList<>();
@@ -30,8 +30,12 @@ public class Main {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 arr[i][j] = kb.nextInt();
-                if (arr[i][j] == 1) h.add(new Point(i, j));
-                else if (arr[i][j] == 2) p.add(new Point(i, j));
+                if (arr[i][j] == 1){
+                    h.add(new Point(i, j));
+                }
+                else if (arr[i][j] == 2){
+                    p.add(new Point(i, j));
+                }
             }
         }
 
