@@ -1,55 +1,70 @@
 package ch09_Greed.day07;
 
 import java.util.*;
-class Edge implements Comparable<Edge>{
-    public int v1;
-    public int v2;
-    public int cost;
-    Edge(int v1, int v2, int cost) {
-        this.v1 = v1;
-        this.v2 = v2;
-        this.cost = cost;
+
+class Edge implements Comparable<Edge> {
+    int a;
+    int b;
+    int c;
+
+    public Edge(int a, int b, int c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
     }
-    @Override
-    public int compareTo(Edge ob){
-        return this.cost-ob.cost;
+
+    public int compareTo(Edge o) {
+        return this.c - o.c;
     }
 }
 
 class Main {
     static int[] unf;
-    public static int Find(int v){
-        if(v==unf[v]) return v;
-        else return unf[v]=Find(unf[v]);
-    }
-    public static void Union(int a, int b){
-        int fa=Find(a);
-        int fb=Find(b);
-        if(fa!=fb) unf[fa]=fb;
-    }
-    public static void main(String[] args){
+    static int answer =0;
+    public static void main(String[] args) {
+        Main T = new Main();
         Scanner kb = new Scanner(System.in);
-        int n=kb.nextInt();
-        int m=kb.nextInt();
-        unf=new int[n+1];
-        ArrayList<Edge> arr=new ArrayList<>();
-        for(int i=1; i<=n; i++) unf[i]=i;
-        for(int i=0; i<m; i++){
-            int a=kb.nextInt();
-            int b=kb.nextInt();
-            int c=kb.nextInt();
-            arr.add(new Edge(a, b, c));
+        int n = kb.nextInt();
+        int m = kb.nextInt();
+        unf = new int[n + 1];
+        ArrayList<Edge> arr = new ArrayList<>();
+        for (int i = 1; i <= n; i++) {
+            unf[i] = i;
         }
-        int answer=0;
+        for (int i = 0; i < m; i++) {
+            int a = kb.nextInt();
+            int b = kb.nextInt();
+            int c = kb.nextInt();
+            arr.add(new Edge(a,b,c));
+        }
         Collections.sort(arr);
-        for(Edge ob : arr){
-            int fv1=Find(ob.v1);
-            int fv2=Find(ob.v2);
-            if(fv1!=fv2){
-                answer+=ob.cost;
-                Union(ob.v1, ob.v2);
+        for(Edge x : arr){
+            int a = x.a;
+            int b = x.b;
+            int c = x.c;
+
+            int fa = find(a);
+            int fb = find(b);
+
+            if(fa != fb){
+                union(a,b);
+                answer += c;
             }
         }
         System.out.println(answer);
+    }
+
+    private static void union(int a, int b) {
+        if(find(a) != find(b)){
+            unf[find(a)] = find(b);
+        }
+    }
+
+    private static int find(int a) {
+        if(unf[a] == a){
+            return a;
+        }else{
+            return unf[a] = find(unf[a]);
+        }
     }
 }
